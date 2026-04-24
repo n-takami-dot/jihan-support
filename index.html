@@ -77,10 +77,10 @@
   .step{display:flex;gap:14px;margin-bottom:14px;}
   .step-n{width:32px;height:32px;min-width:32px;border:2.5px solid var(--red);color:var(--red);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;flex-shrink:0;margin-top:2px;}
   .step-t{font-size:0.9rem;line-height:1.7;}
-  .result-footer{padding:12px 16px;background:var(--bg);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px;}
+  .result-footer{padding:10px 14px;background:var(--bg);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:8px;}
   .link-btn{display:flex;align-items:center;gap:10px;padding:16px 18px;background:white;border:2px solid #90CAF9;border-radius:var(--radius-sm);color:var(--blue);font-size:0.8rem;font-weight:700;text-decoration:none;min-height:54px;}
   .link-btn:active{background:var(--blue-bg);}
-  .alert-box{display:flex;align-items:center;gap:10px;padding:16px 18px;background:var(--orange-bg);border:2px solid #FFE082;border-radius:var(--radius-sm);font-size:0.8rem;color:#7B4800;}
+  .alert-box{display:flex;align-items:center;gap:8px;padding:12px 14px;background:var(--orange-bg);border:2px solid #FFE082;border-radius:var(--radius-sm);font-size:0.8rem;color:#7B4800;line-height:1.5;flex-wrap:nowrap;}
 
   .error-list-item{background:white;border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:8px;border:1.5px solid var(--border);cursor:pointer;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-sm);min-height:58px;}
   .error-list-item:active{background:var(--red-soft);border-color:var(--red-border);}
@@ -418,7 +418,7 @@ function buildCard(e){
   return `<div class="result-card">
     <div class="result-header"><div class="code-box"><span class="code-box-lbl">CODE</span><span class="code-box-num">${e.code}</span></div><div class="result-meta"><div class="result-name">${e.name}</div>${e.status?`<span class="status-tag ${e.st}">${e.status}</span>`:''}</div></div>
     <div class="result-body"><div class="steps-lbl">対処手順</div><ul class="steps">${steps}</ul></div>
-    <div class="result-footer">${pdf}${pdf2}<div class="alert-box">⚠️ 解決しない場合は <strong style="margin:0 4px">村上係長</strong> にご連絡ください</div></div>
+    <div class="result-footer">${pdf}${pdf2}<div class="alert-box"><span style="flex-shrink:0">⚠️</span><span>解決しない場合は<strong style="margin:0 3px">村上係長</strong>にご連絡ください</span></div></div>
   </div>`;
 }
 function toggleMaint(el){el.classList.toggle('open');}
